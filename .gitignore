@@ -1,0 +1,36 @@
+# Secrets and environment files
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.*
+credentials.*
+*_token.*
+*_secret.*
+
+# Local/private notes
+private/
+_private/
+local/
+_local/
+notes-private/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary outputs
+.tmp/
+tmp/
+.cache/
+
+# Large generated media drafts
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.zip

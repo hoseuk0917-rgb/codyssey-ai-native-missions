@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#475569" />
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#dc2626" />
+    </marker>
+    <style>
+      .title{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif;font-size:54px;font-weight:800;fill:#0f172a;letter-spacing:1px}
+      .subtitle{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif;font-size:24px;font-weight:500;fill:#475569}
+      .box{fill:#f8fbff;stroke:#3b82f6;stroke-width:2.5;rx:18;ry:18}
+      .boxText{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif;font-size:30px;font-weight:800;fill:#0f172a;text-anchor:middle}
+      .small{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif;font-size:19px;font-weight:500;fill:#334155;text-anchor:middle}
+      .labelGreen{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif;font-size:18px;font-weight:800;fill:#16a34a}
+      .labelRed{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif;font-size:18px;font-weight:800;fill:#dc2626}
+      .warnBox{fill:#fff1f2;stroke:#ef4444;stroke-width:2.5;rx:18;ry:18}
+      .warnTitle{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif;font-size:26px;font-weight:800;fill:#dc2626;text-anchor:middle}
+      .warnSmall{font-family:'Noto Sans KR','Malgun Gothic',Arial,sans-serif;font-size:18px;font-weight:500;fill:#334155;text-anchor:middle}
+      .arrow{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .arrowRed{stroke:#dc2626;stroke-width:3;fill:none;marker-end:url(#arrowRed)}
+      .icon{font-family:Arial,sans-serif;font-size:36px;text-anchor:middle;dominant-baseline:middle}
+      .badge{fill:#2563eb;stroke:#2563eb;stroke-width:2}
+    </style>
+  </defs>
+
+  <rect width="1200" height="1600" fill="#ffffff"/>
+
+  <text x="600" y="70" class="title" text-anchor="middle">CheckBot 워크플로우 다이어그램</text>
+  <text x="600" y="112" class="subtitle" text-anchor="middle">AI 프로젝트 요구사항 정리·검증·제출문서 초안 작성 봇</text>
+
+  <!-- Start -->
+  <rect x="430" y="155" width="340" height="78" rx="38" ry="38" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="488" cy="194" r="25" class="badge"/>
+  <text x="488" y="195" class="icon" fill="#fff" font-size="28">▶</text>
+  <text x="610" y="205" class="boxText">시작</text>
+
+  <!-- Arrow Start to Input -->
+  <path d="M600 233 L600 272" class="arrow"/>
+
+  <!-- Input -->
+  <rect x="285" y="272" width="630" height="94" class="box"/>
+  <text x="360" y="320" class="icon" fill="#2563eb">📄</text>
+  <text x="600" y="313" class="boxText">입력 단계</text>
+  <text x="600" y="343" class="small">사용자가 미션 설명서 텍스트 입력</text>
+
+  <path d="M600 366 L600 405" class="arrow"/>
+
+  <!-- Security -->
+  <rect x="285" y="405" width="630" height="94" class="box"/>
+  <text x="360" y="454" class="icon" fill="#2563eb">🔒</text>
+  <text x="600" y="445" class="boxText">보안 검사</text>
+  <text x="600" y="475" class="small">개인정보 / API Key / 토큰 포함 여부 확인</text>
+
+  <!-- Warning branch -->
+  <path d="M915 452 L1010 452" class="arrowRed"/>
+  <text x="930" y="438" class="labelRed">포함됨</text>
+  <rect x="1015" y="398" width="150" height="108" class="warnBox"/>
+  <text x="1046" y="451" class="icon" fill="#dc2626">⚠</text>
+  <text x="1100" y="435" class="warnTitle">경고 출력</text>
+  <text x="1100" y="464" class="warnSmall">정보 제거 후</text>
+  <text x="1100" y="489" class="warnSmall">재입력 요청</text>
+  <path d="M1090 398 L1090 315 L915 315" class="arrow"/>
+
+  <!-- clean path -->
+  <text x="610" y="532" class="labelGreen">포함되지 않음</text>
+  <path d="M600 499 L600 548" class="arrow"/>
+
+  <!-- Requirement Analysis -->
+  <rect x="285" y="548" width="630" height="94" class="box"/>
+  <text x="360" y="597" class="icon" fill="#2563eb">🔎</text>
+  <text x="600" y="588" class="boxText">요구사항 분석</text>
+  <text x="600" y="618" class="small">필수 / 선택 / 제약 / 보안 항목 분류</text>
+
+  <path d="M600 642 L600 681" class="arrow"/>
+
+  <!-- Risk -->
+  <rect x="285" y="681" width="630" height="94" class="box"/>
+  <text x="360" y="729" class="icon" fill="#f59e0b">⚠</text>
+  <text x="600" y="721" class="boxText">누락 위험 항목 검사</text>
+  <text x="600" y="751" class="small">위험도 높은 항목 강조 출력</text>
+
+  <path d="M600 775 L600 814" class="arrow"/>
+
+  <!-- Confirm Needed -->
+  <rect x="285" y="814" width="630" height="94" class="box"/>
+  <text x="360" y="862" class="icon" fill="#2563eb">☑</text>
+  <text x="600" y="854" class="boxText">확인 필요 항목 추출</text>
+  <text x="600" y="884" class="small">문서에 없는 내용 → 확인 필요 목록 생성</text>
+
+  <path d="M600 908 L600 954" class="arrow"/>
+
+  <!-- Diamond completeness -->
+  <polygon points="600,954 835,1032 600,1110 365,1032" fill="#f8fbff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="510" y="1033" class="icon" fill="#2563eb">📋</text>
+  <text x="635" y="1024" class="boxText">체크리스트</text>
+  <text x="635" y="1058" class="boxText">완료 여부 판단</text>
+
+  <!-- Incomplete branch -->
+  <path d="M835 1032 L990 1032" class="arrowRed"/>
+  <text x="850" y="1016" class="labelRed">미완료</text>
+  <rect x="995" y="978" width="170" height="108" class="warnBox"/>
+  <text x="1027" y="1033" class="icon" fill="#dc2626">👤</text>
+  <text x="1090" y="1017" class="warnTitle">보완 요청</text>
+  <text x="1090" y="1048" class="warnSmall">부족한 항목</text>
+  <text x="1090" y="1073" class="warnSmall">사용자 안내</text>
+  <path d="M1080 978 L1080 595 L915 595" class="arrow"/>
+
+  <!-- Complete path -->
+  <text x="617" y="1135" class="labelGreen">완료</text>
+  <path d="M600 1110 L600 1164" class="arrow"/>
+
+  <!-- Draft -->
+  <rect x="285" y="1164" width="630" height="116" class="box"/>
+  <text x="360" y="1222" class="icon" fill="#2563eb">📑</text>
+  <text x="600" y="1200" class="boxText">제출문서 초안 생성</text>
+  <text x="600" y="1232" class="small">① LLM 비교 보고서 템플릿</text>
+  <text x="600" y="1258" class="small">② 시스템 설계 문서 템플릿 · ③ 실행 로그 템플릿</text>
+
+  <path d="M600 1280 L600 1319" class="arrow"/>
+
+  <!-- Final output -->
+  <rect x="285" y="1319" width="630" height="94" class="box"/>
+  <text x="360" y="1367" class="icon" fill="#16a34a">🏁</text>
+  <text x="600" y="1358" class="boxText">최종 출력</text>
+  <text x="600" y="1388" class="small">체크리스트 + 초안 3종 + 확인 필요 목록</text>
+
+  <path d="M600 1413 L600 1452" class="arrow"/>
+
+  <!-- End -->
+  <rect x="430" y="1452" width="340" height="78" rx="38" ry="38" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="488" cy="1491" r="25" class="badge"/>
+  <text x="488" y="1492" class="icon" fill="#fff" font-size="28">✓</text>
+  <text x="610" y="1502" class="boxText">종료</text>
+</svg>

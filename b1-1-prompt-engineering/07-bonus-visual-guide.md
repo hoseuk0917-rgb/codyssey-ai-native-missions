@@ -16,6 +16,20 @@ CheckBot이 생성한 요구사항 분석 흐름을 이미지 생성 AI로 시�
 
 ---
 
+## 생성 결과
+
+![CheckBot 워크플로우 다이어그램](outputs/checkbot-workflow-diagram.svg)
+
+| 항목 | 기록 |
+|---|---|
+| 사용 도구명 | ChatGPT 이미지 생성 도구 |
+| 생성 날짜 | 2026-06-04 |
+| 이미지 파일명 | outputs/checkbot-workflow-diagram.svg |
+| 개인정보 포함 여부 | 없음 |
+| 용도 | B1-1 보너스 2 멀티모달 확장 증빙 |
+
+---
+
 ## 다이어그램 구조 설명
 
 ```text
@@ -103,22 +117,10 @@ Minimal style, white background.
 
 ---
 
-## 제출 시 기록할 항목
-
-| 항목 | 기록 |
-|---|---|
-| 사용 도구명 | 확인 필요 |
-| 생성 날짜 | 확인 필요 |
-| 이미지 파일명 | outputs/checkbot-workflow-diagram.png 예정 |
-| 입력 프롬프트 | 본 문서의 이미지 생성 AI 입력 프롬프트 사용 |
-| 개인정보 포함 여부 | 없음 |
-
----
-
 ## 산출물 저장 위치
 
 ```text
-b1-1-prompt-engineering/outputs/checkbot-workflow-diagram.png
+b1-1-prompt-engineering/outputs/checkbot-workflow-diagram.svg
 ```
 
-실제 이미지를 GitHub에 올릴 경우, 개인정보나 계정정보가 포함되지 않았는지 확인한 뒤 업로드합니다.
+개인정보, 계정정보, API Key, 토큰이 포함되지 않은 시각 자료입니다.
